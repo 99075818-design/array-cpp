@@ -1,0 +1,12 @@
+cmake_minimum_required(VERSION 3.10)
+project(MyPlatformer)
+
+# 1. Find the SFML package
+# (We will download SFML in the next step)
+find_package(SFML 2.5 COMPONENTS graphics window system REQUIRED)
+
+# 2. Add your source code
+add_executable(MyPlatformer main.cpp)
+
+# 3. Link SFML to your game
+target_link_libraries(MyPlatformer sfml-graphics sfml-window sfml-system)
